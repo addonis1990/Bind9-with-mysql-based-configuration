@@ -123,7 +123,7 @@ also search for '**ns_server_destroy**' and add mysqldb_clear just after
 </pre>
 
 change,
-**#include <named/mysqldb.h>**
+**#include &lt;named/mysqldb.h&gt;**
 by
 **#include "include/mysqldb.h"**
 
