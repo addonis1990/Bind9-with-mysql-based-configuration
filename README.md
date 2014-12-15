@@ -1,14 +1,14 @@
 Bind9-with-mysql-based-configuration
 ====================================
 
+This document summarizes  how to install and configure Bind9, with a MySQL database as backend instead of configuration files. The repo contains also a simplified API to connect with the DNS via webservices and change its configuration remotely (add Zone, delete zone ...). The API was created for testing purpuses.
 
-	This document summarizes  how to install and configure Bind9, with a MySQL database as backend instead of configuration files. The repo contains also a simplified API to connect with the DNS via webservices and change its configuration remotely (add Zone, delete zone ...). The API was created for testing purpuses.
-
-	**Why ?** Working  on a Domain name server means that you will be frequently editing configuration files. As a consequence you need to restart the server each time you modify or change parameters in these files. Moving to a MySQL Database Backend is a perfect solution to avoid this. Instead of working on Configuration files, all records will be saved on a database and easily updated and accessed via Database queries. No need to restart the server once a modification was done. 
+Why? 
+Working  on a Domain name server means that you will be frequently editing configuration files. As a consequence you need to restart the server each time you modify or change parameters in these files. Moving to a MySQL-based-configuration is a better solution to avoid this flip out. Instead of working on Configuration files, all records will be saved on a database and  then easily updated and accessed via simple Mysql queries. Restartig the sever is no more required every time the congfigration is updated. 
 
  
-	##Steps:
----To prepare the environment and install the missing packages on ubuntu, please follow the steps below
+##Steps:
+**To prepare the environment and install the missing packages on ubuntu, please follow the steps below**
 
 1/ Install mysql:
 <pre>
@@ -23,7 +23,7 @@ Bind9-with-mysql-based-configuration
 </pre>
 
 
----configuration
+**Environment configuration**
 
 3/ Restrict the MySQL daemon to localhost
 <pre>
